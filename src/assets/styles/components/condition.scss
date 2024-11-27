@@ -1,0 +1,60 @@
+.condition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+
+  &__win {
+    background-color: $table-win-color;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 10px;
+      height: 10px;
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.40313 5.76047L1.32313 3.68047L0.203125 4.80047L3.40313 8.00047L9.80313 1.60047L8.68313 0.480469L3.40313 5.76047Z' fill='white'/%3E%3C/svg%3E%0A");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  &__draw {
+    background-color: $table-draw-color;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5x;
+      left: 6px;
+      width: 6px;
+      height: 6px;
+      background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0.5H6V2.5H0V0.5Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 4H6V6H0V4Z' fill='white'/%3E%3C/svg%3E%0A");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  &__lose {
+    background-color: $table-lose-color;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 10px;
+      height: 10px;
+      background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.26623 7.39369L4.00349 5.13095L1.74075 7.39369L0.609375 6.26232L2.87212 3.99958L0.609375 1.73684L1.74075 0.605469L4.00349 2.86821L6.26623 0.605469L7.3976 1.73684L5.13486 3.99958L7.3976 6.26232L6.26623 7.39369Z' fill='white'/%3E%3C/svg%3E%0A");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+  }
+}
+
+//win background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.40313 5.76047L1.32313 3.68047L0.203125 4.80047L3.40313 8.00047L9.80313 1.60047L8.68313 0.480469L3.40313 5.76047Z' fill='white'/%3E%3C/svg%3E%0A");

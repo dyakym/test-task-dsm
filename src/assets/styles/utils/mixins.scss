@@ -1,0 +1,12 @@
+@mixin on-desktop {
+  @media (min-width: $desktop-min-width) {
+    @content;
+  }
+}
+
+@mixin hover($property, $toValue) {
+  transition: #{$property} $effectDirection;
+  &:hover {
+    #{$property}: $toValue;
+  }
+}

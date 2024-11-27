@@ -1,0 +1,142 @@
+.icon {
+  display: block;
+  height: 40px;
+  width: 40px;
+  position: relative;
+
+  @include hover(transform, scale(1.2));
+
+  &--live {
+    width: 87px;
+    height: 40px;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      top: 50%;
+      left: 8px;
+      transform: translate(-50%, -50%);
+      background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 0.5C4.308 0.5 0.5 4.308 0.5 9C0.5 13.692 4.308 17.5 9 17.5C13.692 17.5 17.5 13.692 17.5 9C17.5 4.308 13.692 0.5 9 0.5ZM9 15.8C5.243 15.8 2.2 12.757 2.2 9C2.2 5.243 5.243 2.2 9 2.2C12.757 2.2 15.8 5.243 15.8 9C15.8 12.757 12.757 15.8 9 15.8Z' fill='white' fill-opacity='0.3'/%3E%3Cpath d='M8.99815 12.7092C11.0466 12.7092 12.7072 11.0486 12.7072 9.00011C12.7072 6.95163 11.0466 5.29102 8.99815 5.29102C6.94968 5.29102 5.28906 6.95163 5.28906 9.00011C5.28906 11.0486 6.94968 12.7092 8.99815 12.7092Z' fill='white'/%3E%3C/svg%3E%0A");
+      background-size: cover;
+      background-position: center;
+    }
+
+    &__text {
+      position: absolute;
+      top: 50%;
+      left: 34px;
+      transform: translateY(-50%);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 22px;
+      color: $text-video-main-color;
+    }
+  }
+
+  &--menu {
+    margin-right: 12px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_305)'%3E%3Cpath d='M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_305'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+      background-size: cover;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &--star {
+    &::before {
+      content: "";
+      display: block;
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.4136 7.744L14.0896 7.282L12.0106 2.387C11.6366 1.496 10.3606 1.496 9.98659 2.387L7.90759 7.293L2.59459 7.744C1.62659 7.821 1.23059 9.031 1.96759 9.669L6.00459 13.167L4.79459 18.359C4.57459 19.305 5.59759 20.053 6.43359 19.547L10.9986 16.797L15.5636 19.558C16.3996 20.064 17.4226 19.316 17.2026 18.37L15.9926 13.167L20.0296 9.669C20.7666 9.031 20.3816 7.821 19.4136 7.744ZM10.9986 14.74L6.86259 17.237L7.96259 12.529L4.31059 9.361L9.12859 8.943L10.9986 4.51L12.8796 8.954L17.6976 9.372L14.0456 12.54L15.1456 17.248L10.9986 14.74Z' fill='white'/%3E%3C/svg%3E%0A");
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &--nofitication {
+    &::before {
+      content: "";
+      display: block;
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_267)'%3E%3Cpath d='M10.9974 20.168C12.0057 20.168 12.8307 19.343 12.8307 18.3346H9.16406C9.16406 19.343 9.98906 20.168 10.9974 20.168ZM16.4974 14.668V10.0846C16.4974 7.27047 15.0032 4.91464 12.3724 4.2913V3.66797C12.3724 2.90714 11.7582 2.29297 10.9974 2.29297C10.2366 2.29297 9.6224 2.90714 9.6224 3.66797V4.2913C7.00073 4.91464 5.4974 7.2613 5.4974 10.0846V14.668L3.66406 16.5013V17.418H18.3307V16.5013L16.4974 14.668ZM14.6641 15.5846H7.33073V10.0846C7.33073 7.8113 8.7149 5.95964 10.9974 5.95964C13.2799 5.95964 14.6641 7.8113 14.6641 10.0846V15.5846Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_267'%3E%3Crect width='22' height='22' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+      background-size: cover;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &--search {
+    &::before {
+      content: "";
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_274)'%3E%3Cpath d='M21.3065 19.8886L16.5734 15.1359C17.7904 13.7392 18.4571 11.9819 18.4571 10.1524C18.4571 5.878 14.8551 2.40039 10.4278 2.40039C6.00047 2.40039 2.39844 5.878 2.39844 10.1524C2.39844 14.4268 6.00047 17.9044 10.4278 17.9044C12.0899 17.9044 13.6737 17.4204 15.0279 16.5016L19.797 21.2903C19.9963 21.4902 20.2644 21.6004 20.5518 21.6004C20.8237 21.6004 21.0817 21.5003 21.2775 21.3183C21.6937 20.9317 21.7069 20.2906 21.3065 19.8886ZM10.4278 4.42265C13.7003 4.42265 16.3625 6.99294 16.3625 10.1524C16.3625 13.3118 13.7003 15.8821 10.4278 15.8821C7.15531 15.8821 4.49305 13.3118 4.49305 10.1524C4.49305 6.99294 7.15531 4.42265 10.4278 4.42265Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_274'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+      background-size: cover;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &__inner {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #28a745;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+
+  &--user,
+  &--search {
+    display: none;
+
+    @include on-desktop {
+      display: block;
+    }
+  }
+
+  &--live {
+    display: block;
+
+    @include on-desktop {
+      display: none;
+    }
+  }
+}

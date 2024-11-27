@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar navbar-top">
+        <div class="navbar-top__left">
+          <button href="#" class="icon icon--menu"></button>
+          <a href="#">
+            <img
+              src="./src/assets/img/logo.png"
+              alt="Sport UA"
+              class="navbar-top__logo"
+            />
+          </a>
+        </div>
+        <div class="navbar-top__right">
+          <a href="#" class="icon icon--live">
+            <span class="icon--live__text">Матчи</span>
+          </a>
+          <a href="#" class="icon icon--star"></a>
+          <a href="#" class="icon icon--nofitication"></a>
+          <a href="#" class="icon icon--search"></a>
+          <a href="#" class="icon icon--user">
+            <span class="icon__inner">D</span>
+          </a>
+        </div>
+      </nav>
+      <div class="navbar-bottom">
+        <a href="#" class="navbar-bottom__section">Футбол</a>
+        <a href="#" class="navbar-bottom__medals">Зачет медалей</a>
+        <a href="#" class="navbar-bottom__ratings">Рейтинги</a>
+      </div>
+    </header>
+    <article>
+      <div class="container">
+        <div class="breadcrums">
+          <span class="breadcrums__item-wrapper">
+            <a href="#" class="breadcrums__item">Главная</a>
+          </span>
+          <span class="breadcrums__item-wrapper">
+            <a href="#" class="breadcrums__item">Футбол</a>
+          </span>
+        </div>
+        <section class="grid">
+          <div class="main">
+            <div class="league">
+              <div class="league-wrapper">
+                <div class="league__logo">
+                  <img
+                    src="./src//assets/img/league-logo.png"
+                    alt="Ukraine-league"
+                    class="league__img"
+                  />
+                </div>
+                <div class="league__info">
+                  <h2 class="league__title">Украинская Премьер-Лига</h2>
+                  <p class="league__season">Сезон 2019/2020 32-й тур</p>
+                </div>
+              </div>
+              <ul class="league__links">
+                <li>
+                  <a class="league__link" href="#">Главная</a>
+                </li>
+                <li>
+                  <a class="league__link league__link--active" href="#"
+                    >Таблица</a
+                  >
+                </li>
+                <li>
+                  <a class="league__link" href="#">Календарь</a>
+                </li>
+                <li>
+                  <a class="league__link" href="#">Бомбардиры</a>
+                </li>
+                <li>
+                  <a class="league__link" href="#">Зрители</a>
+                </li>
+                <li>
+                  <a class="league__link" href="#">Трансферы</a>
+                </li>
+              </ul>
+            </div>
+            <div class="tournament">
+              <div class="tournament__filter">
+                <h1 class="tournament__filter-title">Турнирная таблица</h1>
+                <ul class="tournament__filter-items">
+                  <li>
+                    <button
+                      class="tournament__filter-item tournament__filter-item--active default"
+                      id="default"
+                    >
+                      Загальна
+                    </button>
+                  </li>
+                  <li>
+                    <button class="tournament__filter-item home" id="home">
+                      Дома
+                    </button>
+                  </li>
+                  <li>
+                    <button class="tournament__filter-item away" id="away">
+                      В гостях
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="table__wrapper" id="default">
+                <table class="table">
+                  <thead class="table__head">
+                    <tr class="table__row table__row--head">
+                      <th class="table__head--name">Група А</th>
+                      <th class="table__head-games">Игры</th>
+                      <th class="table__head--wins">В</th>
+                      <th class="table__head--draw">Н</th>
+                      <th class="table__head--loses">П</th>
+                      <th class="table__head--goals">З - П</th>
+                      <th class="table__head--form">Форма</th>
+                      <th class="table__head--points">Очки</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table__body">
+                    <tr class="table__row table__row--body">
+                      <td class="table__body--team">
+                        <span class="table__body--num table__body--num--top2"
+                          >1
+                          <span class="table__body--hover-effect"
+                            >Лига чемпионов</span
+                          >
+                        </span>
+                        <img src="./src/assets/img/team.png" alt="" />
+                        <span class="table__body--name">Бавария</span>
+                      </td>
+                      <td class="table__body--games">6</td>
+                      <td class="table__body--wins">4</td>
+                      <td class="table__body--draw">1</td>
+                      <td class="table__body--loses">1</td>
+                      <td class="table__body--goals">16 - 4</td>
+                      <td class="table__body--form">
+                        <span class="condition__wrapper">
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__draw"></span>
+                          <span class="condition condition__lose"></span>
+                        </span>
+                      </td>
+                      <td class="table__body--points">13</td>
+                    </tr>
+                    <tr class="table__row table__row--body">
+                      <td class="table__body--team">
+                        <span class="table__body--num table__body--num--top2"
+                          >2
+                          <span class="table__body--hover-effect"
+                            >Лига чемпионов</span
+                          >
+                        </span>
+                        <span class="table__body--logo"
+                          ><img src="./src/assets/img/team.png" alt=""
+                        /></span>
+                        <span class="table__body--name">Бавария</span>
+                      </td>
+                      <td class="table__body--games">6</td>
+                      <td class="table__body--wins">4</td>
+                      <td class="table__body--draw">1</td>
+                      <td class="table__body--loses">1</td>
+                      <td class="table__body--goals">16 - 4</td>
+                      <td class="table__body--form">
+                        <span class="condition__wrapper">
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__draw"></span>
+                          <span class="condition condition__lose"></span>
+                        </span>
+                      </td>
+                      <td class="table__body--points">13</td>
+                    </tr>
+                    <tr class="table__row table__row--body">
+                      <td class="table__body--team">
+                        <span class="table__body--num table__body--num--third"
+                          >3
+                          <span class="table__body--hover-effect"
+                            >Лига чемпионов</span
+                          >
+                        </span>
+                        <span class="table__body--logo"
+                          ><img src="./src/assets/img/team.png" alt=""
+                        /></span>
+                        <span class="table__body--name">Бавария</span>
+                      </td>
+                      <td class="table__body--games">6</td>
+                      <td class="table__body--wins">4</td>
+                      <td class="table__body--draw">1</td>
+                      <td class="table__body--loses">1</td>
+                      <td class="table__body--goals">16 - 4</td>
+                      <td class="table__body--form">
+                        <span class="condition__wrapper">
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__draw"></span>
+                          <span class="condition condition__lose"></span>
+                        </span>
+                      </td>
+                      <td class="table__body--points">13</td>
+                    </tr>
+                    <tr class="table__row table__row--body">
+                      <td class="table__body--team">
+                        <span class="table__body--num"
+                          >4
+                          <span class="table__body--hover-effect"
+                            >Лига чемпионов</span
+                          >
+                        </span>
+                        <span class="table__body--logo"
+                          ><img src="./src/assets/img/team.png" alt=""
+                        /></span>
+                        <span class="table__body--name">Бавария</span>
+                      </td>
+                      <td class="table__body--games">6</td>
+                      <td class="table__body--wins">4</td>
+                      <td class="table__body--draw">1</td>
+                      <td class="table__body--loses">1</td>
+                      <td class="table__body--goals">16 - 4</td>
+                      <td class="table__body--form">
+                        <span class="condition__wrapper">
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__draw"></span>
+                          <span class="condition condition__lose"></span>
+                        </span>
+                      </td>
+                      <td class="table__body--points">13</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="table">
+                  <thead class="table__head">
+                    <tr class="table__row table__row--head">
+                      <th class="table__head--name">Група А</th>
+                      <th class="table__head-games">Игры</th>
+                      <th class="table__head--wins">В</th>
+                      <th class="table__head--draw">Н</th>
+                      <th class="table__head--loses">П</th>
+                      <th class="table__head--goals">З - П</th>
+                      <th class="table__head--form">Форма</th>
+                      <th class="table__head--points">Очки</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table__body">
+                    <tr class="table__row table__row--body">
+                      <td class="table__body--team">
+                        <span class="table__body--num table__body--num--top2"
+                          >1
+                          <span class="table__body--hover-effect"
+                            >Лига чемпионов</span
+                          >
+                        </span>
+                        <img src="./src/assets/img/team.png" alt="" />
+                        <span class="table__body--name">Бавария</span>
+                      </td>
+                      <td class="table__body--games">6</td>
+                      <td class="table__body--wins">4</td>
+                      <td class="table__body--draw">1</td>
+                      <td class="table__body--loses">1</td>
+                      <td class="table__body--goals">16 - 4</td>
+                      <td class="table__body--form">
+                        <span class="condition__wrapper">
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__draw"></span>
+                          <span class="condition condition__lose"></span>
+                        </span>
+                      </td>
+                      <td class="table__body--points">13</td>
+                    </tr>
+                    <tr class="table__row table__row--body">
+                      <td class="table__body--team">
+                        <span class="table__body--num table__body--num--top2"
+                          >2
+                          <span class="table__body--hover-effect"
+                            >Лига чемпионов</span
+                          >
+                        </span>
+                        <span class="table__body--logo"
+                          ><img src="./src/assets/img/team.png" alt=""
+                        /></span>
+                        <span class="table__body--name">Бавария</span>
+                      </td>
+                      <td class="table__body--games">6</td>
+                      <td class="table__body--wins">4</td>
+                      <td class="table__body--draw">1</td>
+                      <td class="table__body--loses">1</td>
+                      <td class="table__body--goals">16 - 4</td>
+                      <td class="table__body--form">
+                        <span class="condition__wrapper">
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__draw"></span>
+                          <span class="condition condition__lose"></span>
+                        </span>
+                      </td>
+                      <td class="table__body--points">13</td>
+                    </tr>
+                    <tr class="table__row table__row--body">
+                      <td class="table__body--team">
+                        <span class="table__body--num table__body--num--third"
+                          >3
+                          <span class="table__body--hover-effect"
+                            >Лига чемпионов</span
+                          >
+                        </span>
+                        <span class="table__body--logo"
+                          ><img src="./src/assets/img/team.png" alt=""
+                        /></span>
+                        <span class="table__body--name">Бавария</span>
+                      </td>
+                      <td class="table__body--games">6</td>
+                      <td class="table__body--wins">4</td>
+                      <td class="table__body--draw">1</td>
+                      <td class="table__body--loses">1</td>
+                      <td class="table__body--goals">16 - 4</td>
+                      <td class="table__body--form">
+                        <span class="condition__wrapper">
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__draw"></span>
+                          <span class="condition condition__lose"></span>
+                        </span>
+                      </td>
+                      <td class="table__body--points">13</td>
+                    </tr>
+                    <tr class="table__row table__row--body">
+                      <td class="table__body--team">
+                        <span class="table__body--num"
+                          >4
+                          <span class="table__body--hover-effect"
+                            >Лига чемпионов</span
+                          >
+                        </span>
+                        <span class="table__body--logo"
+                          ><img src="./src/assets/img/team.png" alt=""
+                        /></span>
+                        <span class="table__body--name">Бавария</span>
+                      </td>
+                      <td class="table__body--games">6</td>
+                      <td class="table__body--wins">4</td>
+                      <td class="table__body--draw">1</td>
+                      <td class="table__body--loses">1</td>
+                      <td class="table__body--goals">16 - 4</td>
+                      <td class="table__body--form">
+                        <span class="condition__wrapper">
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__draw"></span>
+                          <span class="condition condition__lose"></span>
+                        </span>
+                      </td>
+                      <td class="table__body--points">13</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="table">
+                  <thead class="table__head">
+                    <tr class="table__row table__row--head">
+                      <th class="table__head--name">Група А</th>
+                      <th class="table__head-games">Игры</th>
+                      <th class="table__head--wins">В</th>
+                      <th class="table__head--draw">Н</th>
+                      <th class="table__head--loses">П</th>
+                      <th class="table__head--goals">З - П</th>
+                      <th class="table__head--form">Форма</th>
+                      <th class="table__head--points">Очки</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table__body">
+                    <tr class="table__row table__row--body">
+                      <td class="table__body--team">
+                        <span class="table__body--num table__body--num--top2"
+                          >1
+                          <span class="table__body--hover-effect"
+                            >Лига чемпионов</span
+                          >
+                        </span>
+                        <img src="./src/assets/img/team.png" alt="" />
+                        <span class="table__body--name">Бавария</span>
+                      </td>
+                      <td class="table__body--games">6</td>
+                      <td class="table__body--wins">4</td>
+                      <td class="table__body--draw">1</td>
+                      <td class="table__body--loses">1</td>
+                      <td class="table__body--goals">16 - 4</td>
+                      <td class="table__body--form">
+                        <span class="condition__wrapper">
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__draw"></span>
+                          <span class="condition condition__lose"></span>
+                        </span>
+                      </td>
+                      <td class="table__body--points">13</td>
+                    </tr>
+                    <tr class="table__row table__row--body">
+                      <td class="table__body--team">
+                        <span class="table__body--num table__body--num--top2"
+                          >2
+                          <span class="table__body--hover-effect"
+                            >Лига чемпионов</span
+                          >
+                        </span>
+                        <span class="table__body--logo"
+                          ><img src="./src/assets/img/team.png" alt=""
+                        /></span>
+                        <span class="table__body--name">Бавария</span>
+                      </td>
+                      <td class="table__body--games">6</td>
+                      <td class="table__body--wins">4</td>
+                      <td class="table__body--draw">1</td>
+                      <td class="table__body--loses">1</td>
+                      <td class="table__body--goals">16 - 4</td>
+                      <td class="table__body--form">
+                        <span class="condition__wrapper">
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__draw"></span>
+                          <span class="condition condition__lose"></span>
+                        </span>
+                      </td>
+                      <td class="table__body--points">13</td>
+                    </tr>
+                    <tr class="table__row table__row--body">
+                      <td class="table__body--team">
+                        <span class="table__body--num table__body--num--third"
+                          >3
+                          <span class="table__body--hover-effect"
+                            >Лига чемпионов</span
+                          >
+                        </span>
+                        <span class="table__body--logo"
+                          ><img src="./src/assets/img/team.png" alt=""
+                        /></span>
+                        <span class="table__body--name">Бавария</span>
+                      </td>
+                      <td class="table__body--games">6</td>
+                      <td class="table__body--wins">4</td>
+                      <td class="table__body--draw">1</td>
+                      <td class="table__body--loses">1</td>
+                      <td class="table__body--goals">16 - 4</td>
+                      <td class="table__body--form">
+                        <span class="condition__wrapper">
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__draw"></span>
+                          <span class="condition condition__lose"></span>
+                        </span>
+                      </td>
+                      <td class="table__body--points">13</td>
+                    </tr>
+                    <tr class="table__row table__row--body">
+                      <td class="table__body--team">
+                        <span class="table__body--num"
+                          >4
+                          <span class="table__body--hover-effect"
+                            >Лига чемпионов</span
+                          >
+                        </span>
+                        <span class="table__body--logo"
+                          ><img src="./src/assets/img/team.png" alt=""
+                        /></span>
+                        <span class="table__body--name">Бавария</span>
+                      </td>
+                      <td class="table__body--games">6</td>
+                      <td class="table__body--wins">4</td>
+                      <td class="table__body--draw">1</td>
+                      <td class="table__body--loses">1</td>
+                      <td class="table__body--goals">16 - 4</td>
+                      <td class="table__body--form">
+                        <span class="condition__wrapper">
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__win"></span>
+                          <span class="condition condition__draw"></span>
+                          <span class="condition condition__lose"></span>
+                        </span>
+                      </td>
+                      <td class="table__body--points">13</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table__wrapper hidden" id="home">
+                <table class="table" id="groupA">
+                  <thead class="table__head">
+                    <tr class="table__row table__row--head">
+                      <th class="table__head--name">Група А</th>
+                      <th class="table__head-games">Игры</th>
+                      <th class="table__head--wins">В</th>
+                      <th class="table__head--draw">Н</th>
+                      <th class="table__head--loses">П</th>
+                      <th class="table__head--goals">З - П</th>
+                      <th class="table__head--form">Форма</th>
+                      <th class="table__head--points">Очки</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table__body"></tbody>
+                </table>
+                <table class="table" id="groupB">
+                  <thead class="table__head">
+                    <tr class="table__row table__row--head">
+                      <th class="table__head--name">Група А</th>
+                      <th class="table__head-games">Игры</th>
+                      <th class="table__head--wins">В</th>
+                      <th class="table__head--draw">Н</th>
+                      <th class="table__head--loses">П</th>
+                      <th class="table__head--goals">З - П</th>
+                      <th class="table__head--form">Форма</th>
+                      <th class="table__head--points">Очки</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table__body"></tbody>
+                </table>
+                <table class="table" id="groupC">
+                  <thead class="table__head">
+                    <tr class="table__row table__row--head">
+                      <th class="table__head--name">Група А</th>
+                      <th class="table__head-games">Игры</th>
+                      <th class="table__head--wins">В</th>
+                      <th class="table__head--draw">Н</th>
+                      <th class="table__head--loses">П</th>
+                      <th class="table__head--goals">З - П</th>
+                      <th class="table__head--form">Форма</th>
+                      <th class="table__head--points">Очки</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table__body"></tbody>
+                </table>
+              </div>
+              <div class="table__wrapper hidden" id="away">
+                <table class="table" id="groupA">
+                  <thead class="table__head">
+                    <tr class="table__row table__row--head">
+                      <th class="table__head--name">Група А</th>
+                      <th class="table__head-games">Игры</th>
+                      <th class="table__head--wins">В</th>
+                      <th class="table__head--draw">Н</th>
+                      <th class="table__head--loses">П</th>
+                      <th class="table__head--goals">З - П</th>
+                      <th class="table__head--form">Форма</th>
+                      <th class="table__head--points">Очки</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table__body"></tbody>
+                </table>
+                <table class="table" id="groupB">
+                  <thead class="table__head">
+                    <tr class="table__row table__row--head">
+                      <th class="table__head--name">Група А</th>
+                      <th class="table__head-games">Игры</th>
+                      <th class="table__head--wins">В</th>
+                      <th class="table__head--draw">Н</th>
+                      <th class="table__head--loses">П</th>
+                      <th class="table__head--goals">З - П</th>
+                      <th class="table__head--form">Форма</th>
+                      <th class="table__head--points">Очки</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table__body"></tbody>
+                </table>
+                <table class="table" id="groupC">
+                  <thead class="table__head">
+                    <tr class="table__row table__row--head">
+                      <th class="table__head--name">Група А</th>
+                      <th class="table__head-games">Игры</th>
+                      <th class="table__head--wins">В</th>
+                      <th class="table__head--draw">Н</th>
+                      <th class="table__head--loses">П</th>
+                      <th class="table__head--goals">З - П</th>
+                      <th class="table__head--form">Форма</th>
+                      <th class="table__head--points">Очки</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table__body"></tbody>
+                </table>
+              </div>
+              <div class="info">
+                <div class="info__qualification">
+                  <h3 class="info__title">Квалификация</h3>
+                  <div class="info__qualification-items">
+                    <div class="info__qualification-item">
+                      <span
+                        class="info__qualification-symbol info__qualification-symbol--first"
+                      ></span>
+                      <span class="info__text"
+                        >Чемпионы Лига чемпионов УЕФА</span
+                      >
+                    </div>
+                    <div class="info__qualification-item">
+                      <span
+                        class="info__qualification-symbol info__qualification-symbol--second"
+                      ></span>
+                      <span class="info__text">Лига чемпионов УЕФА</span>
+                    </div>
+                    <div class="info__qualification-item">
+                      <span
+                        class="info__qualification-symbol info__qualification-symbol--third"
+                      ></span>
+                      <span class="info__text">Лига Европы УЕФА</span>
+                    </div>
+                    <div class="info__qualification-item">
+                      <span
+                        class="info__qualification-symbol info__qualification-symbol--fourth"
+                      ></span>
+                      <span class="info__text">Понижение</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="info__abbreviation">
+                  <h3 class="info__title">Сокращения</h3>
+                  <div class="info__abbreviation-items">
+                    <div class="info__abbreviation-item">
+                      <span class="info__abbreviation-symbol">В</span>
+                      <span class="info__text">Выигрыш</span>
+                    </div>
+                    <div class="info__abbreviation-item">
+                      <span class="info__abbreviation-symbol">Н</span>
+                      <span class="info__text">Ничья</span>
+                    </div>
+                    <div class="info__abbreviation-item">
+                      <span class="info__abbreviation-symbol">П</span>
+                      <span class="info__text">Поражение</span>
+                    </div>
+                    <div class="info__abbreviation-item">
+                      <span class="info__abbreviation-symbol">З-П</span>
+                      <span class="info__text">Забитые - пропущенные</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="info__form">
+                  <h3 class="info__title">Форма</h3>
+                  <div class="info__form-items">
+                    <div class="info__form-item">
+                      <span class="condition condition__win"></span>
+                      <span class="info__text">Выигрыш</span>
+                    </div>
+                    <div class="info__form-item">
+                      <span class="condition condition__lose"></span>
+                      <span class="info__text">Поражение</span>
+                    </div>
+                    <div class="info__form-item">
+                      <span class="condition condition__draw"></span>
+                      <span class="info__text">Ничья</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <aside class="aside">
+            <section class="aside__category">
+              <h2 class="aside__title">Главные новости</h2>
+              <ul class="aside__list">
+                <li class="aside__item">
+                  <a href="#" class="aside__name"
+                    >Артем ФРАНКОВ: «Я не сторонник перехода на систему
+                    весна-осень»</a
+                  >
+                </li>
+                <li class="aside__item">
+                  <a href="#" class="aside__name"
+                    >Welcome to the team! Макгрегор поприветствовал Пакьяо в
+                    своей команде</a
+                  >
+                </li>
+                <li class="aside__item">
+                  <a href="#" class="aside__name"
+                    >КАРИКАТУРА ДНЯ. Сэйв столетия от Бэнкса после удара Пеле</a
+                  >
+                </li>
+                <li class="aside__item">
+                  <a href="#" class="aside__name"
+                    >Лунин стал игроком месяца в Овьедо</a
+                  >
+                </li>
+                <li class="aside__item">
+                  <a href="#" class="aside__name"
+                    >Welcome to the team! Макгрегор поприветствовал Пакьяо в
+                    своей команде</a
+                  >
+                </li>
+              </ul>
+            </section>
+            <section class="aside__category">
+              <h2 class="aside__title">Тренды</h2>
+              <div class="aside__tags">
+                <a href="#" class="aside__tag">Коронавирус</a>
+                <a href="#" class="aside__tag">Трансферы лета</a>
+                <a href="#" class="aside__tag">Рейтинг клубов</a>
+                <a href="#" class="aside__tag">Барселона</a>
+              </div>
+            </section>
+            <section class="aside__category">
+              <h2 class="aside__title">Видео</h2>
+              <a href="#" class="aside__video">
+                <img
+                  class="aside__video-img"
+                  src="./src/assets/img/video.png"
+                  alt="video-photo"
+                />
+                <div class="aside__video-icon"></div>
+                <span class="aside__video-topic">Футбол</span>
+                <p class="aside__video-title">
+                  Руслан КОСТЫШИН: «Футболисты выступили с инициативой сократить
+                  зарплаты»
+                </p>
+                <div class="aside__video-line">
+                  <p class="aside__video-date">28 октября 2020</p>
+                  <p class="aside__video-comments">999</p>
+                </div>
+              </a>
+            </section>
+          </aside>
+        </section>
+      </div>
+    </article>
+    <script type="module" src="/src/assets/ts/main.ts"></script>
+  </body>
+</html>

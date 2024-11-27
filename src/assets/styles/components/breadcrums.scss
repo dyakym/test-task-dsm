@@ -1,0 +1,47 @@
+.breadcrums {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 16px;
+  padding-bottom: 16px;
+
+  @include on-desktop {
+    border-bottom: 1px solid #eee;
+  }
+
+  &__item-wrapper {
+    position: relative;
+
+    &:last-child {
+      .breadcrums__item {
+        color: $text-subtle-color;
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      background-image: url("data:image/svg+xml,%3Csvg width='6' height='8' viewBox='0 0 6 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.0847 3.71446L1.48714 0.118095C1.32928 -0.039365 1.07353 -0.039365 0.915269 0.118095C0.75741 0.275555 0.75741 0.531311 0.915269 0.688771L4.22747 3.99978L0.915668 7.3108C0.757809 7.46826 0.757809 7.72401 0.915668 7.88187C1.07353 8.03933 1.32968 8.03933 1.48754 7.88187L5.0851 4.2855C5.24057 4.12967 5.24057 3.8699 5.0847 3.71446Z' fill='black' fill-opacity='0.38'/%3E%3C/svg%3E%0A");
+      background-size: contain;
+      background-repeat: no-repeat;
+      pointer-events: none;
+    }
+  }
+
+  &__item {
+    font-size: 12px;
+    line-height: 12px;
+    color: $text-primary-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

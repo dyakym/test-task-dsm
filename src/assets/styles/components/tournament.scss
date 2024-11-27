@@ -1,0 +1,48 @@
+.tournament {
+  margin-top: 32px;
+
+  &__filter {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 9px;
+
+    @include on-desktop {
+      flex-direction: row;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &-items {
+      display: flex;
+      gap: 6px;
+
+      &:last-child {
+        margin-right: 16px;
+      }
+    }
+
+    &-item {
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      line-height: 24px;
+      color: $text-league-inactive-color;
+      background-color: $button-color;
+
+      &:hover {
+        background-color: $filter-hover-color;
+        color: $text-title-color;
+      }
+      &--active {
+        font-weight: 500;
+        background-color: $filter-hover-color;
+        color: $text-title-color;
+      }
+    }
+  }
+}
